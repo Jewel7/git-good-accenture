@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var cors = require('cors')
 
 //import data model
 require('./api/models/db');
@@ -14,7 +15,11 @@ require('./api/config/passport');
 
 //import routes for api
 let routesAPI = require('./api/routes/private-profile')
-
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(cors());
 app.use(passport.initialize())
 //tell app to use the api routes instead of the default routes when interactinc with api
 app.use('/api', routesAPI)
@@ -33,3 +38,10 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+app.get("/",function(req, res){
+    res.sendFile(path.join(__dirname, "index.html"))
+
+})
+
+app.listen(3000)
+

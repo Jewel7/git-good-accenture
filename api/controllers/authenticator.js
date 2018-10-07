@@ -14,7 +14,7 @@ module.exports.register = function (req, res) {
 
     //todo: error handling for bad user
     var user = new User();
-
+    
     user.first_name = req.body.first_name
     user.last_name = req.body.last_name
     user.user_name = req.body.user_name
