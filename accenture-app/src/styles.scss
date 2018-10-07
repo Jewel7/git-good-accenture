@@ -1,12 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
-$blue-accent: #3b608b;
-.outer-wrapper {
-    position: relative;
+$dark-red: #b33939;
+ @font-face {
+    font-family: Rajdhani;
+    src: url(/assets/fonts/Rajdhani/Rajdhani-Regular.ttf);
+  }
+
+  .auth-container{
+    background-image: url('/assets/images/login-background.jpg');
+   
+    //center and scale the image
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+	
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+	
+    /* Set up positioning */
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    font-family: 'Source Sans Pro', sans-serif;
+
+    overflow-y:scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'lato', sans-serif;
+    color: black;
+}
+/*this media query checks to see if the browser window is smaller than the image, and uses a combo 
+*percentage-left and negative left margin to keep it centered regardless.
+*/@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+      }
   }
   
