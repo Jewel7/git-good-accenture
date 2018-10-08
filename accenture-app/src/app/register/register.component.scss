@@ -7,9 +7,95 @@
     height: 600px;
   }
   
-  @mixin text{
-    font-family: "rajdhani";
+.flex-outer,
+.flex-inner {
+    list-style-type: none;
+    padding: 20px 20px 0px;
+}
+
+.flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.flex-outer li,
+.flex-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-inner {
+    padding: 0 8px;
+    justify-content: space-between;  
+}
+
+.flex-outer > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+    @include text;
+    @include text-color;
+    font-size: 18px;
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+    @include text;
+    flex: 1 0 220px;
+    
+}
+
+.flex-outer li p {
+     margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']) {
+    padding: 15px;
+    border: none;
+    font-size: 14px;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.555);
+}
+
+.flex-outer li button {
+    @include text;
+    margin-left: auto;
+    padding: 12px 45px;
+    border: none;
+    background:$dark-red;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
+    &:hover{
+        color: $dark-red;
+        cursor: pointer;
+        background-color: white;
+        transition: background-color .3s, color .3s;
+    }
+}
+
+.flex-inner li {
+    width: 100px;
+}
+
+form input[type="text"]:hover {
+    background-color: #eeeeee;
+    
   }
-  @mixin text-color{
-    color: $dark-red;
-  }
+  
+ 
