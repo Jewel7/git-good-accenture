@@ -3,11 +3,12 @@
 
 /*this media query checks to see if the browser window is smaller than the image, and uses a combo 
 *percentage-left and negative left margin to keep it centered regardless.
-*/@media screen and (max-width: 1024px) { /* Specific to this particular image */
-    img.bg {
-      left: 50%;
-      margin-left: -512px;   /* 50% */
-    }
+*/
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
 }
 
 .wrapper {
@@ -19,30 +20,10 @@
     padding-right: 10px; /* 3 */
     padding-left:  10px; /* 3 */
 }
-  .login-container{
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
-    width:450px;
-    height: 450px;
-    display: flex;  
-    flex-direction: column;
-}
-
-@mixin text{
-    font-family: "rajdhani";
-}
-@mixin text-color{
-    color: $dark-red;
-}
-  
-.company-name{
-  @include text;
-  @include text-color;
-  font-size: 40px;
-  text-align: center;
-  padding: 40px 20px 0;
-  margin:0;
+.login-container{
+  @include container;
+  width: 450px;
+  height: 450px;
 }
 
 .login-item {

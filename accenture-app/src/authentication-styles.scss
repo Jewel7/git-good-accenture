@@ -1,6 +1,18 @@
 /*
 *This stylesheet is to be imported for the login and registration page.
 */
+@import '~src/styles.scss';
+
+  
+@mixin container{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+    opacity: .80;
+    width:450px;
+    display: flex;  
+    flex-direction: column;
+}
 
 .auth-container{
     background-image: url('/assets/images/login-background.jpg');
@@ -39,4 +51,13 @@
         margin-left: -512px;   /* 50% */
       }
   }
-  
+
+.company-name{
+    @include text;
+    @include text-color;
+    font-size: 40px;
+    text-align: center;
+    padding: 40px 20px 0;
+    margin:0;
+  }
+

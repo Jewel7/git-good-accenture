@@ -4,3 +4,10 @@ $dark-red: #b33939;
     font-family: Rajdhani;
     src: url(/assets/fonts/Rajdhani/Rajdhani-Regular.ttf);
   }
+
+@mixin text{
+    font-family: "rajdhani";
+}
+@mixin text-color{
+    color: $dark-red;
+ }

@@ -1,2 +1,15 @@
 @import '~src/styles.scss';
 @import '~src/authentication-styles.scss';
+
+.register-container{
+    @include container;
+    width: 450px;
+    height: 600px;
+  }
+  
+  @mixin text{
+    font-family: "rajdhani";
+  }
+  @mixin text-color{
+    color: $dark-red;
+  }
