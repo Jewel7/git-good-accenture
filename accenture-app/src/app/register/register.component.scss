@@ -4,7 +4,7 @@
 .register-container{
     @include container;
     width: 450px;
-    height: 600px;
+    height: 650px;
   }
   
 .flex-outer,
@@ -60,7 +60,7 @@
 }
 
 .flex-outer li p {
-     margin: 0;
+    margin: 0;
 }
 
 .flex-outer li input:not([type='checkbox']) {
