@@ -63,7 +63,8 @@
     margin: 0;
 }
 
-.flex-outer li input:not([type='checkbox']) {
+.flex-outer li input {
+    outline: 0; //gets rid of the blue outline
     padding: 15px;
     border: none;
     font-size: 14px;
@@ -92,6 +93,7 @@
 .flex-inner li {
     width: 100px;
 }
+
 
 form input[type="text"]:hover {
     background-color: #eeeeee;
