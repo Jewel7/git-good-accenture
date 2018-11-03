@@ -3,15 +3,15 @@
   <div class="login-container">
     <div class="company-name">Accenture</div>
     <div class="login-item">
-      <form action="" method="post" class="form form-login">
+      <form (submit)="login()" class="form form-login">
         <div class="form-field">
           <div><span class="hidden">Username</span></div>
-          <input id="login-username" type="text" class="form-input" placeholder="Username" required>
+          <input type = "text" name ="email" id="login-username"  class="form-input" placeholder="Email" required [(ngModel)] ="credentials.email">
         </div>
 
         <div class="form-field">
           <div><span class="hidden">Password</span></div>
-          <input id="login-password" type="password" class="form-input" placeholder="Password" required>
+          <input type = "password" name = "password" id="login-password" class="form-input" placeholder="Password" required [(ngModel)] = "credentials.password">
         </div>
 
         <div class="form-field">

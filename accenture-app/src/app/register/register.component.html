@@ -1,31 +1,31 @@
 <div class="auth-container">
   <div class="register-container">
     <div class="company-name">Accenture</div>
-    <form>
+    <form (submit)="register()">
       <ul class="flex-outer">
         <li>
           <label for="first-name">First Name</label>
-          <input type="text" placeholder="First Name">
+          <input type="text" name= "first_name" placeholder="First Name" [(ngModel)]= "credentials.first_name">
         </li>
-        <li>
+        <li>  
           <label for="last-name">Last Name</label>
-          <input type="text"  placeholder="Last Name">
+          <input type="text"  name = "last_name" placeholder="Last Name" [(ngModel)]= "credentials.last_name">
         </li>
         <li>
           <label for="email">Email</label>
-          <input type="text" placeholder="Email">
+          <input type="text" name = "email" placeholder="Email" [(ngModel)]= "credentials.email">
         </li>
         <li>
           <label for="phone">Username</label>
-          <input type="text" placeholder="Username">
+          <input type="text" name= "username" placeholder="Username" [(ngModel)]= "credentials.user_name">
         </li>
         <li>
           <label for="password">Password</label>
-          <input type="text" placeholder="Password">
+          <input type="text" name = "password" placeholder="Password" [(ngModel)]= "credentials.password">
         </li>
         <li>
             <label for="confirm-password"> Confirm Password</label>
-            <input type="text" placeholder="Confirm Password">
+            <input name = "confirm_password" type="text" placeholder="Confirm Password">
           </li>
         <li>
           <button type="submit">Submit</button>
