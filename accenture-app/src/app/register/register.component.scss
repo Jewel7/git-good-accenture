@@ -100,4 +100,10 @@ form input[type="text"]:hover {
     
   }
   
+  .back-button {
+    color: $dark-red;
+    &:hover{
+        cursor: pointer;
+    }
+  }
  
