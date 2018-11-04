@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import {ProfileComponent} from './profile/profile.component'
+import { AuthGuardService } from './auth-guard.service';
 
 /**
  * Routes tell the router which view to display when a user clicks on a link or pastes a URL 
@@ -23,7 +25,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  {path: 'profile', component:ProfileComponent, canActivate:[AuthGuardService]}
 ];
 
 @NgModule({
