@@ -22,7 +22,7 @@ import { AuthGuardService } from './auth-guard.service';
  */
 const routes: Routes = [
   //This route redirects a URL that fully matches the empty path to the specified route
-  { path: '', redirectTo: '/profile', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'home', component: HomeComponent },
