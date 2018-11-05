@@ -1,25 +1,12 @@
+<div class="wrapper">
+  <div class="container">
+    <form>
+      <div class="title">{{ details?.first_name }} {{ details?.last_name }}</div>
+      <div class="details">
+        <div>{{ details?.email }}</div>
+        <button type = "button" (click)="auth.logout()">Logout</button>
+      </div>
+    </form>
+  </div>
 
-
-  
-     
-
-      <h1 class="form-signin-heading">Your profile</h1>
-
-      
-        <div class="form-group">
-          <label name= "name">Full name</label>
-          <p>{{ details?.first_name }}</p>
-          <p>{{ details?.last_name }}</p>
-        </div>
-        <div class="form-group">
-          <label name = "email">Email</label>
-          <p>{{ details?.email }}</p>
-           <a (click)="auth.logout()">Logout</a> 
-
-        </div>
-      
-
-    
-
-  
-
+</div>

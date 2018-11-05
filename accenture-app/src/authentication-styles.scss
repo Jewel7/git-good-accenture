@@ -3,17 +3,6 @@
 */
 @import '~src/styles.scss';
 
-  
-@mixin container{
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
-    opacity: .90;
-    width:450px;
-    display: flex;  
-    flex-direction: column;
-}
-
 .auth-container{
     background-image: url('/assets/images/login-background.jpg');
    
@@ -34,8 +23,6 @@
     position: fixed;
     top: 0;
     left: 0;
-
-    overflow-y:scroll;
 
     display: flex;
     justify-content: center;

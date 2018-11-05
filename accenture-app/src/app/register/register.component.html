@@ -4,28 +4,28 @@
     <form (submit)="register()">
       <ul class="flex-outer">
         <li>
-          <label for="first-name">First Name</label>
-          <input type="text" name= "first_name" placeholder="First Name" [(ngModel)]= "credentials.first_name">
+          <label for="firstname">First Name</label>
+          <input type="text" name= "firstname" placeholder="First Name" id = "firstname" [(ngModel)]= "credentials.first_name">
         </li>
         <li>  
-          <label for="last-name">Last Name</label>
-          <input type="text"  name = "last_name" placeholder="Last Name" [(ngModel)]= "credentials.last_name">
+          <label for="lastname">Last Name</label>
+          <input type="text"  name = "lastname" placeholder="Last Name" id = "lastname" [(ngModel)]= "credentials.last_name">
         </li>
         <li>
           <label for="email">Email</label>
-          <input type="text" name = "email" placeholder="Email" [(ngModel)]= "credentials.email">
+          <input type="text" name = "email" placeholder="Email" id = "email" [(ngModel)]= "credentials.email">
         </li>
         <li>
-          <label for="phone">Username</label>
-          <input type="text" name= "username" placeholder="Username" [(ngModel)]= "credentials.user_name">
+          <label for="username">Username</label>
+          <input type="text" name= "username" placeholder="Username" id = "username" [(ngModel)]= "credentials.user_name">
         </li>
         <li>
           <label for="password">Password</label>
-          <input type="text" name = "password" placeholder="Password" [(ngModel)]= "credentials.password">
+          <input type="text" name = "password" placeholder="Password" id = "password" [(ngModel)]= "credentials.password">
         </li>
         <li>
             <label for="confirm-password"> Confirm Password</label>
-            <input name = "confirm_password" type="text" placeholder="Confirm Password">
+            <input name = "confirm-password" type="text" id = "confirm-password" placeholder="Confirm Password">
           </li>
         
         <li>

@@ -22,7 +22,7 @@ import { AuthGuardService } from './auth-guard.service';
  */
 const routes: Routes = [
   //This route redirects a URL that fully matches the empty path to the specified route
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/profile', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'home', component: HomeComponent },
@@ -31,7 +31,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    //The method is called forRoot() because we configure the rouer at the app's root level
+    //The method is called forRoot() because we configure the router at the app's root level
     //The forRoot() method supplies the service providers and directives needed for routing, 
     //and performs the intitial navigation based on the current browser URL
     RouterModule.forRoot(routes)
