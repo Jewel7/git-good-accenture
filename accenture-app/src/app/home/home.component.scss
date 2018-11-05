@@ -1,0 +1,20 @@
+@import "~src/styles.scss";
+@import "~src/authentication-styles.scss";
+
+.container {
+  @include container;
+  background-image: url("/assets/images/home-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-container {
+  @include form-container;
+  width: 100px;
+  height: 100px;
+}
+
+input[type="submit"]{
+    @include text;
+    @include text-color;
+}

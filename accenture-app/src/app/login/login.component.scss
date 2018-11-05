@@ -21,7 +21,7 @@
     padding-left:  10px; /* 3 */
 }
 .login-container{
-  @include container;
+  @include form-container;
   width: 450px;
   height: 450px;
   overflow-y: scroll;
