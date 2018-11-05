@@ -1,6 +1,7 @@
 @import "~src/styles.scss";
 
-.wrapper {
+.container {
+  @include container;
   position: fixed;
   padding: 0;
   margin: 0;
@@ -20,9 +21,9 @@
     #664141
   );
 
-  .container {
+  .profile-container{
     @include text;
-    @include container;
+    @include form-container;
     width: 450px;
     overflow-y: scroll;
     padding: 30px;

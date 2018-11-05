@@ -2,7 +2,7 @@
 @import '~src/authentication-styles.scss';
 
 .register-container{
-    @include container;
+    @include form-container;
     width: 450px;
     height: 650px;
   }

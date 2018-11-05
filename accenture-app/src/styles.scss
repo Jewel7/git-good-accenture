@@ -1,13 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 $dark-red: #b33939;
 
-/**
-*The @font-face rule allows custom fonts to be loaded on a webpage. Once added to a stylesheet, 
-*the rule instructs the browser to download the font from where it is hosted, then display it as specified in the CSS.
-**/
-
-  
+//A container to span the whole page
 @mixin container{
+    position: fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+
+}
+@mixin form-container{
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
@@ -17,6 +23,10 @@ $dark-red: #b33939;
     flex-direction: column;
 }
 
+/**
+*The @font-face rule allows custom fonts to be loaded on a webpage. Once added to a stylesheet, 
+*the rule instructs the browser to download the font from where it is hosted, then display it as specified in the CSS.
+**/
  @font-face {
     font-family: Rajdhani;
     src: url(/assets/fonts/Rajdhani/Rajdhani-Regular.ttf);
