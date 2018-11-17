@@ -1,0 +1,28 @@
+.top{
+    background-color: #F2F2F2;
+}
+footer{
+    background-color: #F2F2F2;
+}
+#header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+.topnav{
+    display: flex;
+    flex-direction: row;
+}
+.link{
+    display: flex;
+    background-color: #BFBFBF;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
