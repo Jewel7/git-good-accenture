@@ -93,9 +93,11 @@
 .flex-inner li {
     width: 100px;
 }
+.warnings{
+    font-size: 7px;
+}
 
-
-form input[type="text"]:hover {
+form input[type="text"]:hover, form input[type="password"]:hover{
     background-color: #eeeeee;
     
   }

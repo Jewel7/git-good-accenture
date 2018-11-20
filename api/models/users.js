@@ -46,7 +46,7 @@ userSchema.methods.generateJwt = function () {
     last_name: this.last_name,
     user_name:this.user_name,
     exp: parseInt(expiry.getTime() / 1000),
-  }, "MY_SECRET"); // todo: add actual private key
+  }, "DEE2A4F9D7305EE613C5D177286929B1114588FFDACCD19AA3D5DCA0FB7FB306"); // todo: add actual private key
 };
 
 db.model('User', userSchema);

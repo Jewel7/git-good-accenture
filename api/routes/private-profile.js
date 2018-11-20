@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var jwt = require('express-jwt');
 var auth = jwt({
-  secret: 'MY_SECRET', //todo implement private key
+  secret: 'DEE2A4F9D7305EE613C5D177286929B1114588FFDACCD19AA3D5DCA0FB7FB306', //todo implement private key
   userProperty: 'payload'
 });
 // import controllers

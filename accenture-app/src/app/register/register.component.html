@@ -1,36 +1,47 @@
 <div class="auth-container">
   <div class="register-container">
     <div class="company-name">Accenture</div>
-    <form (submit)="register()">
+    <form novalidate [formGroup]="registerForm" (submit)=" register()">
       <ul class="flex-outer">
         <li>
           <label for="firstname">First Name</label>
-          <input type="text" name= "firstname" placeholder="First Name" id = "firstname" [(ngModel)]= "credentials.first_name">
+          <input type="text" name= "firstname" formControlName = "first_name"required placeholder="First Name" id = "firstname" [(ngModel)]= "credentials.first_name">
+          <p class= "warnings"*ngIf="registerForm.controls.first_name.invalid && (registerForm.controls.first_name.dirty || registerForm.controls.first_name.touched)"> First Name is required </p>
         </li>
         <li>  
           <label for="lastname">Last Name</label>
-          <input type="text"  name = "lastname" placeholder="Last Name" id = "lastname" [(ngModel)]= "credentials.last_name">
+          <input type="text"  name = "lastname" formControlName = "last_name"required placeholder="Last Name" id = "lastname" [(ngModel)]= "credentials.last_name">
+          <p class = "warnings" *ngIf="registerForm.controls.last_name.invalid && (registerForm.controls.last_name.dirty || registerForm.controls.last_name.touched)"> Last Name is required </p>
         </li>
         <li>
           <label for="email">Email</label>
-          <input type="text" name = "email" placeholder="Email" id = "email" [(ngModel)]= "credentials.email">
+          <input type="text" name = "email" formControlName = "email"required placeholder="Email" id = "email" [(ngModel)]= "credentials.email">
+          <p class = "warnings"*ngIf="registerForm.controls.email.invalid && (registerForm.controls.email.dirty || registerForm.controls.email.touched)"> Email is required and should be valid address</p>
         </li>
         <li>
           <label for="username">Username</label>
-          <input type="text" name= "username" placeholder="Username" id = "username" [(ngModel)]= "credentials.user_name">
+          <input type="text" name= "username" formControlName = "user_name"required placeholder="Username" id = "username" [(ngModel)]= "credentials.user_name">
+          <p class = "warnings" *ngIf="registerForm.controls.first_name.invalid && (registerForm.controls.user_name.dirty || registerForm.controls.user_name.touched)"> Username is required </p>
         </li>
         <li>
           <label for="password">Password</label>
-          <input type="text" name = "password" placeholder="Password" id = "password" [(ngModel)]= "credentials.password">
+
+          <input type="password" name = "password" formControlName = "password"required placeholder="Password" id = "password" [(ngModel)]= "credentials.password" >
+          <p class = "warnings" *ngIf="registerForm.controls.password.invalid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)"> Password is required and should contain 1 
+            uppercase letter, one lowercase letter, one number, and should be at least 8 characters long </p>
         </li>
         <li>
             <label for="confirm-password"> Confirm Password</label>
-            <input name = "confirm-password" type="text" id = "confirm-password" placeholder="Confirm Password">
+            <input name = "confirm-password" type="password" formControlName = "password_confirm" required id = "confirm-password" placeholder="Confirm Password">
+            <p class = "warnings" *ngIf="registerForm.controls.password_confirm.invalid && (registerForm.controls.password_confirm.dirty || registerForm.controls.password_confirm.touched)"> Password is required and should contain 1 
+                uppercase letter, one lowercase letter, one number, and should be at least 8 characters long </p>
           </li>
         
         <li>
             <i routerLink = "../login" class="fa fa-arrow-left back-button"></i>
-          <button type="submit">Submit</button>
+          <button type="submit" 
+          *ngIf="registerForm.controls.first_name.valid && registerForm.controls.last_name.valid 
+          && registerForm.controls.password.valid && registerForm.controls.password_confirm.valid && registerForm.controls.email.valid && registerForm.controls.user_name.valid">Submit</button>
         </li>
       </ul>
     </form>
