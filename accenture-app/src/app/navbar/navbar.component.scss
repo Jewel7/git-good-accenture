@@ -1,0 +1,45 @@
+@import "~src/styles.scss";
+//styles the fixed navbar
+.navbar {
+  @include text;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  padding: 10px 0px;
+  background-color: $dark-red;
+
+  .navbar__logo {
+    align-content: center;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  //styles the  name of the app
+  .navbar--title {
+    text-transform: uppercase;
+    font-size: 25px;
+    flex-grow: 1;
+    padding-left: 10px;
+    font-weight: 800;
+  } 
+  
+  //styles the navbar links
+  .navbar--links {
+    padding: 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar--icons{
+      color:white;
+      padding-left: 3px;
+  }
+}

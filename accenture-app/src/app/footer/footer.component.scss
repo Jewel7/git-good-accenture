@@ -1,0 +1,39 @@
+@import "~src/styles.scss";
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: lighten($dark-red, 35);
+    
+    //styles the links listed in the footer
+    .footer__links {
+      display: flex;
+      justify-content: flex-start;
+    }
+    div,
+    a {
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px;
+      color: $dark-red;
+      text-align: center;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    //styles the social media icons on the footer
+    .footer__social-media {
+      color: white;
+      text-align: center;
+      font-size: 25px;
+
+      i + i {
+        padding-left: 10px;
+      }
+    }
+  }
