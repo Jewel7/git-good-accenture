@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import{NavbarComponent} from '../navbar/navbar.component';
+
 @Injectable()
 
 @Component({

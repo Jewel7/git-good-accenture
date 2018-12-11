@@ -1,0 +1,64 @@
+@import "~src/styles.scss";
+
+//container for the page
+.container {
+  @include text;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+  // background-image: url('/assets/images/login-background.jpg');
+
+content-wrapper{
+  display: flex;
+  position:relative;
+  align-content: center;
+  align-items: center;
+  overflow: scroll;
+  justify-content: center;
+}
+  .claims-container{
+    @include form-container;
+    background-color: darken($dark-red, 5);
+    margin: 20px auto;
+    padding: 20px;
+    align-self: center;
+
+    .title {
+      text-align: center;
+      font-size: 40px;
+      text-align: center;
+      padding: 20px 20px 0;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .details {
+      color:white;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      button[type="button"] {
+        @include text;
+        background-color: $dark-red;
+        text-transform: uppercase;
+        border:none;
+        text-align: center;
+        color: white;
+        padding: 5px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 0.25rem;
+        margin-top: 10px;      
+      }
+    }
+  }
+}
