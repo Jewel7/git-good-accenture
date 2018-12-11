@@ -1,0 +1,56 @@
+<div class="auth-container">
+    <div class="register-container">
+      <form novalidate [formGroup]="claimForm" (submit)=" sendClaim()">
+        <ul class="flex-outer">
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name= "name" formControlName = "name"required placeholder="Name" id = "name" [(ngModel)]= "claimDetails.name">
+            <p class= "warnings"*ngIf="claimForm.controls.name.invalid && (claimForm.controls.name.dirty || claimForm.controls.name.touched)"> Name is required </p>
+          </li>
+          <li>  
+            <label for="email">Email</label>
+            <input type="text"  name = "email" formControlName = "email"required placeholder="Email" id = "email" [(ngModel)]= "claimDetails.email">
+            <p class = "warnings" *ngIf="claimForm.controls.email.invalid && (claimForm.controls.email.dirty || claimForm.controls.email.touched)"> Email is required </p>
+          </li>
+          <li>
+            <label for="ssn">SSN</label>
+            <input type="text" name = "ssn" formControlName = "ssn"required placeholder="SSN" id = "ssn" [(ngModel)]= "claimDetails.ssn">
+            <p class = "warnings"*ngIf="claimForm.controls.ssn.invalid && (claimForm.controls.ssn.dirty || claimForm.controls.ssn.touched)"> SSN is required</p>
+          </li>
+          <li>
+            <label for="dob">Date Of Birth</label>
+            <input type="text" name= "dob" formControlName = "dob"required placeholder="Date of Birth" id = "dob" [(ngModel)]= "claimDetails.dob">
+            <p class = "warnings" *ngIf="claimForm.controls.dob.invalid && (claimForm.controls.dob.dirty || claimForm.controls.dob.touched)"> Date of Birth is required </p>
+          </li>
+          <li>
+            <label for="married">Marital Status</label>
+            <input type="text" name = "married" formControlName = "married"required placeholder="Status" id = "married" [(ngModel)]= "claimDetails.married" >
+            <p class = "warnings" *ngIf="claimForm.controls.married.invalid && (claimForm.controls.married.dirty || claimForm.controls.married.touched)"> Marital Status is required </p>
+          </li>
+          <li>
+              <label for="children">Number of Children(Enter zero for no children)</label>
+              <input type="text" name = "children" formControlName = "children"required placeholder="Children" id = "children" [(ngModel)]= "claimDetails.children" >
+              <p class = "warnings" *ngIf="claimForm.controls.children.invalid && (claimForm.controls.children.dirty || claimForm.controls.children.touched)"> Number of Children is required </p>
+            </li>
+            <li>
+                <label for="date_of_condition">Date of Condition Onset</label>
+                <input type="text" name = "date_of_condition" formControlName = "date_of_condition"required placeholder="Date" id = "date_of_condition" [(ngModel)]= "claimDetails.date_of_condition" >
+                <p class = "warnings" *ngIf="claimForm.controls.date_of_condition.invalid && (claimForm.controls.date_of_condition.dirty || claimForm.controls.date_of_condition.touched)"> Date is required</p>
+            </li>
+            <li>
+                <label for="condition_description">Description of Condition</label>
+                <input type="text" name = "condition_description" formControlName = "condition_description"required placeholder="Description" id = "condition_description" [(ngModel)]= "claimDetails.condition_description" >
+                <p class = "warnings" *ngIf="claimForm.controls.condition_description.invalid && (claimForm.controls.condition_description.dirty || claimForm.controls.condition_description.touched)"> Date is required</p>
+            </li>
+          <li>
+              <i routerLink = "../login" class="fa fa-arrow-left back-button"></i>
+            <button type="submit" 
+            *ngIf="claimForm.controls.name.valid && claimForm.controls.email.valid 
+            && claimForm.controls.dob.valid && claimForm.controls.married.valid && claimForm.controls.ssn.valid && claimForm.controls.children.valid&& claimForm.controls.date_of_condition.valid
+            && claimForm.controls.condition_description.valid">Submit</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  
+  </div>

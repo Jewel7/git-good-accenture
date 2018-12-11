@@ -1,16 +1,10 @@
 let passport = require('passport')
 let db = require('mongoose')
 let User = db.model('User')
+let Claim = db.model('Claim')
 
 
 module.exports.register = function (req, res) {
-
-    // if(!req.body.name || !req.body.email || !req.body.password) {
-    //   sendJSONresponse(res, 400, {
-    //     "message": "All fields required"
-    //   });
-    //   return;
-    // }
 
     //todo: error handling for bad user
     var user = new User();
@@ -35,13 +29,7 @@ module.exports.register = function (req, res) {
 
 module.exports.login = function (req, res) {
 
-    // if(!req.body.email || !req.body.password) {
-    //   sendJSONresponse(res, 400, {
-    //     "message": "All fields required"
-    //   });
-    //   return;
-    // }
-
+   
     passport.authenticate('local', function (err, user, info) {
         var token;
 
@@ -63,5 +51,25 @@ module.exports.login = function (req, res) {
             res.status(401).json(info);
         }
     })(req, res);
+
+};
+module.exports.submitClaim = function (req, res) {
+
+    
+    var claim = new Claim();
+    claim.name = req.body.name
+    claim.email= req.body.email
+    claim.ssn = req.body.ssn
+    claim.dob= req.body.dob
+    claim.married= req.body.married
+    claim.children= req.body.children
+    claim.date_of_condition= req.body.date_of_condition
+    claim.condition_description= req.body.condition_description
+    
+    
+
+    claim.save(function (err) {
+        res.status(200).json(info);
+    });
 
 };

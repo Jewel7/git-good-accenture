@@ -12,6 +12,7 @@ import {ProfileComponent} from './profile/profile.component'
 import { AuthGuardService } from './auth-guard.service';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
+import {ClaimsComponent} from './claims/claims.component';
 
 /**
  * Routes tell the router which view to display when a user clicks on a link or pastes a URL 
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {path: 'profile', component:ProfileComponent, canActivate:[AuthGuardService]},
   {path: 'navbar', component: NavbarComponent },
-  {path: 'footer', component: FooterComponent}
+  {path: 'footer', component: FooterComponent},
+  {path: 'claim', component: ClaimsComponent}
 ];
 
 @NgModule({

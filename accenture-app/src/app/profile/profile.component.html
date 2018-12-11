@@ -3,7 +3,7 @@
   <div class="content-wrapper">
     <div class="profile-container">
       <form>
-        <div class="title">{{ details?.first_name }} {{ details?.last_name }}</div>
+        <div class="title">Welcome {{ details?.first_name }} {{ details?.last_name }}</div>
         <div class="details">
           <div>{{ details?.email }}</div>
           <button type="button" (click)="auth.logout()">Logout</button>

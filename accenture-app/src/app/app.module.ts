@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGuardService } from './auth-guard.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ClaimsComponent } from './claims/claims.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
+    ClaimsComponent,
   ],
   imports: [
     BrowserModule,

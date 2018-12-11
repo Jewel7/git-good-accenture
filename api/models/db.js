@@ -46,4 +46,5 @@ process.on('SIGTERM', function() {
 });
 
 // import database models
-require('./users');
+require('./users')
+require('./claim')
