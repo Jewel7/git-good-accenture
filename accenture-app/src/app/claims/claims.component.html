@@ -43,7 +43,7 @@
                 <p class = "warnings" *ngIf="claimForm.controls.condition_description.invalid && (claimForm.controls.condition_description.dirty || claimForm.controls.condition_description.touched)"> Date is required</p>
             </li>
           <li>
-              <i routerLink = "../login" class="fa fa-arrow-left back-button"></i>
+              
             <button type="submit" 
             *ngIf="claimForm.controls.name.valid && claimForm.controls.email.valid 
             && claimForm.controls.dob.valid && claimForm.controls.married.valid && claimForm.controls.ssn.valid && claimForm.controls.children.valid&& claimForm.controls.date_of_condition.valid
