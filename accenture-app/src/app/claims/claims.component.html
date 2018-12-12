@@ -40,8 +40,8 @@
                 <p class = "warnings" *ngIf="claimForm.controls.date_of_condition.invalid && (claimForm.controls.date_of_condition.dirty || claimForm.controls.date_of_condition.touched)"> Date is required</p>
             </li>
             <li>
-                <label for="condition_description">Description of Condition</label>
-                <input type="text" name = "condition_description" formControlName = "condition_description"required placeholder="Description" id = "condition_description" [(ngModel)]= "claimDetails.condition_description" >
+                <label for="condition_description">Description of Condition</label> <br>
+                <textarea  rows = "10" cols = "50" name = "condition_description" formControlName = "condition_description"required placeholder="Description" id = "condition_description" [(ngModel)]= "claimDetails.condition_description" ></textarea>
                 <p class = "warnings" *ngIf="claimForm.controls.condition_description.invalid && (claimForm.controls.condition_description.dirty || claimForm.controls.condition_description.touched)"> Date is required</p>
             </li>
           <li>
